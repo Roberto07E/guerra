@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pistas de Fórmula 1</title>
+    <link rel="stylesheet" href="pistas.css">
+</head>
+<body>
+    <h1>Pistas de Fórmula 1</h1>
+    <div id="tracks-container"></div>
+    <script>
+        const tracks = [
+            { name: "Monza", image: "https://images.daznservices.com/di/library/DAZN_News/24/ca/monza-gp-italia-gran-premio-de-italia-formula-1-f1_9bag38iciu1f118g6l71uo0qg.jpg?t=314989067" },
+            { name: "Mónaco", image: "https://img.redbull.com/images/c_limit,w_1500,h_1000/f_auto,q_auto/redbullcom/2021/5/18/ipsdfstmkuw0faah8vru/guia-circuito-monaco-formula-1" },
+            { name: "Silverstone", image: "https://img2.51gt3.com/rac/article/202412/c9159132d5fc40c2b246e1869299f1bc.jpg" },
+            { name: "Suzuka", image: "https://img2.51gt3.com/rac/article/202412/2a071605da2b47b8bd5eff6ba6914617.jpg" },
+            { name: "Spa-Francorchamps", image: "https://lastwordonsports.com/motorsports/wp-content/uploads/sites/12/2022/08/Spa-Circuit-2019.jpg" }
+        ];
+
+        const container = document.getElementById("tracks-container");
+        tracks.forEach(track => {
+            const div = document.createElement("div");
+            div.className = "track";
+            div.innerHTML = `<h2>${track.name}</h2><img src="${track.image}" alt="${track.name}">`;
+            container.appendChild(div);
+        });
+    </script>
+</body>
+</html>
