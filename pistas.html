@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pistas de la Fórmula 1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card-img-top {
+            width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+            height: 200px; /* Tamaño fijo para todas las imágenes */
+            object-fit: cover; /* Recorta la imagen sin distorsionarla */
+            border-top-left-radius: 10px; /* Bordes redondeados */
+            border-top-right-radius: 10px;
+        }
+    </style>
 </head>
 <body class="bg-light text-dark">
     <header class="bg-dark text-white text-center py-4">
@@ -18,7 +27,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="portada.html">Portada</a></li>
-                    <li class="nav-item"><a class="nav-link" href="historia.html">Portada</a></li>
+                    <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
                     <li class="nav-item"><a class="nav-link" href="reglamentos.html">Reglamentos</a></li>
                     <li class="nav-item"><a class="nav-link" href="pistas.html">Pistas</a></li>
                     <li class="nav-item"><a class="nav-link" href="equipos.html">Equipos</a></li>
@@ -33,27 +42,18 @@
         <div class="row">
             <script>
                 const circuits = [
-                    { name: "Gran Premio de Baréin", img: "https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2018/04/barein-night.jpg?tf=3840x", description: "Circuito Internacional de Baréin - Un trazado moderno con largas rectas y curvas cerradas." },
+                    { name: "Gran Premio de Baréin", img: "https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2018/04/barein-night.jpg", description: "Circuito Internacional de Baréin - Un trazado moderno con largas rectas y curvas cerradas." },
                     { name: "Gran Premio de Arabia Saudita", img: "https://cdn-5.motorsport.com/images/amp/6O1nMMw2/s1000/lhaqttgg-1.jpg", description: "Circuito Callejero de Yeda - Uno de los más rápidos y desafiantes de la temporada." },
-                    { name: "Gran Premio de Australia", img: "https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2018/03/datazos-albert-park.jpg?tf=3840x", description: "Circuito de Albert Park - Una combinación de velocidad y técnica en Melbourne." },
-                    { name: "Gran Premio de Japón", img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNSETcq7q3RfCAJ92KzPB6yyjYN2M0rFFu-mS4o-_YvFGK-oq3RVQdymIbhRgdixA6mAy2TxAk76cxBo1ZN0hkGPulpzuSnmZWOLFmE7XEazVjTfsE6K6FbUxHXi_o3uVE9WlObyeX65V5/s1600/suzuka2+%2528Copiar%2529.jpg", description: "Circuito de Suzuka - Un trazado técnico con la famosa curva 130R." },
+                    { name: "Gran Premio de Australia", img: "https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2018/03/datazos-albert-park.jpg", description: "Circuito de Albert Park - Una combinación de velocidad y técnica en Melbourne." },
+                    { name: "Gran Premio de Japón", img: "https://img2.51gt3.com/rac/article/202412/2a071605da2b47b8bd5eff6ba6914617.jpg", description: "Circuito de Suzuka - Un trazado técnico con la famosa curva 130R." },
                     { name: "Gran Premio de China", img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQa_Me7BeU_1b1IoJVcrjlavsv6zjqCORTXTqmcgCsbnqgwalE8vjziT-SYecSf9EzSBF16sbGdUayFwd37cRWTleE9t5eG71R5NKAPqP7tMoOynBAvzWOB8TdrsLzcodoExdXtXw6q5kd/s1600/ShanghaiInternationalCircuitaerialview.jpg", description: "Circuito Internacional de Shanghái - Con una recta larguísima y curvas cerradas." },
                     { name: "Gran Premio de Miami", img: "https://vipdeportivo.es/wp-content/uploads/2022/05/FRyGcRoXoAAKQrM-min.jpg", description: "Circuito Urbano de Miami - Un trazado con ambiente vibrante en EE.UU." },
-                    { name: "Gran Premio de España", img: "https://a.ccdn.es/cnet/contents/media/resources/2021/7/1281040.jpg/66_93_1276_774/", description: "Circuito de Barcelona-Catalunya - Uno de los más equilibrados del calendario." },
+                    { name: "Gran Premio de España", img: "https://a.ccdn.es/cnet/contents/media/resources/2021/7/1281040.jpg", description: "Circuito de Barcelona-Catalunya - Uno de los más equilibrados del calendario." },
                     { name: "Gran Premio de Mónaco", img: "https://img.redbull.com/images/c_limit,w_1500,h_1000/f_auto,q_auto/redbullcom/2021/5/18/ipsdfstmkuw0faah8vru/guia-circuito-monaco-formula-1", description: "Circuito de Montecarlo - La joya del calendario con sus calles estrechas y desafiantes." },
-                    { name: "Gran Premio de Canadá", img: "https://i0.wp.com/www.momentogp.com/wp-content/uploads/2019/06/canada_aerial.jpg?resize=1000%2C600&ssl=1", description: "Circuito Gilles Villeneuve - Un trazado semiurbano con largas rectas." },
-                    { name: "Gran Premio de Austria", img: "https://img.asmedia.epimg.net/resizer/v2/VIBKNPUZV5JZTIFU2HV3P2WNUY.jpg?auth=66d35a87cb59040644ee33cb8ad12756ce203e563a8a3e5b1bb945626fc5beca&width=360", description: "Red Bull Ring - Circuito corto pero con muchas elevaciones y curvas rápidas." },
-                    { name: "Gran Premio de Gran Bretaña", img: "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2021/02/01/800px-silverstone-circuit-july-2-2018-skysat-cropped.jpeg", description: "Circuito de Silverstone - La cuna de la Fórmula 1 y uno de los más rápidos." },
-                    { name: "Gran Premio de Hungría", img: "https://driver61.com/wp-content/uploads/2019/08/Hungaroring-Circuit-Guide.jpg", description: "Hungaroring - Un trazado revirado que desafía a los pilotos." },
-                    { name: "Gran Premio de Bélgica", img: "https://images.ecestaticos.com/lPTnEF6bEIHTRO1XMOCD3eG9kHQ=/0x0:2272x1515/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F536%2Fcdd%2F1aa%2F536cdd1aada1514d5bb90e856925e8bc.jpg", description: "Circuito de Spa-Francorchamps - Uno de los favoritos de los pilotos." },
-                    { name: "Gran Premio de Países Bajos", img: "https://images.daznservices.com/di/library/DAZN_News/d6/21/circuito-de-zandvoort-paises-bajos_myc5ts61h76h1b62yp0zuw178.jpg?t=-1493374837", description: "Circuito de Zandvoort - Famoso por sus curvas peraltadas." },
-                    { name: "Gran Premio de Italia", img: "https://images.daznservices.com/di/library/DAZN_News/24/ca/monza-gp-italia-gran-premio-de-italia-formula-1-f1_9bag38iciu1f118g6l71uo0qg.jpg?t=359922323&w=800&quality=100", description: "Autódromo de Monza - La casa de la velocidad con largas rectas." },
-                    { name: "Gran Premio de Singapur", img: "https://e00-marca.uecdn.es/imagenes/2011/09/19/motor/formula1/1316433841_extras_noticia_foton_7_0.jpg", description: "Circuito Urbano de Marina Bay - Una carrera nocturna espectacular." },
-                    { name: "Gran Premio de EE.UU.", img: "https://okdiario.com/img/2019/04/10/circuito-de-las-americas.jpg", description: "Circuito de las Américas - Una mezcla de curvas rápidas y técnicas." },
+                    { name: "Gran Premio de Canadá", img: "https://i0.wp.com/www.momentogp.com/wp-content/uploads/2019/06/canada_aerial.jpg", description: "Circuito Gilles Villeneuve - Un trazado semiurbano con largas rectas." },
+                    { name: "Gran Premio de Austria", img: "https://www.redbullring.com/en/wp-content/uploads/sites/1/2021/07/Red-Bull-Ring-Luftaufnahme-Styrian-GP-2021-e1649946807938-scaled.jpg", description: "Red Bull Ring - Circuito corto pero con muchas elevaciones y curvas rápidas." },
+                    { name: "Gran Premio de Italia", img: "https://espirituracer.com/archivos/2022/09/circuito-monza.webp", description: "Autódromo de Monza - La casa de la velocidad con largas rectas." },
                     { name: "Gran Premio de México", img: "https://sportsmedia.games/wp-content/uploads/2023/07/Q6ZLCP3TSNBM7O5YT6XUQOMNKY.jpeg", description: "Autódromo Hermanos Rodríguez - Famoso por el Foro Sol y su altitud." },
-                    { name: "Gran Premio de Brasil", img: "https://www.statsf1.com/photos/circuits/interlagos.jpg", description: "Interlagos - Un trazado corto y desafiante en Sao Paulo." },
-                    { name: "Gran Premio de Las Vegas", img: "https://media.gq.com.mx/photos/645560d22f52f48c1a2e076e/16:9/w_2560%2Cc_limit/F1%2520LasVegas.jpg", description: "Un nuevo circuito urbano en el corazón de Las Vegas." },
-                    { name: "Gran Premio de Qatar", img: "https://fast-mag.com/mag/wp-content/uploads/2023/09/Lusail_Circuit_credit.jpg", description: "Circuito de Losail - Diseñado para motos, pero muy desafiante para la F1." },
                     { name: "Gran Premio de Abu Dhabi", img: "https://cdn-imgix.headout.com/media/images/34d32cfecc101356423fcf09fb61d053-Yas-Marina-Circuit-Hero.jpg", description: "Circuito de Yas Marina - Cierra la temporada con una carrera nocturna." }
                 ];
                 
@@ -77,9 +77,9 @@
     </div>
     
     <footer class="bg-dark text-white text-center py-3 mt-4">
-        <p>&copy; 2025 Historia de la Fórmula 1 - Proyecto Universidad Don Bosco</p>
+        <p>&copy; Cirucuitos de la Fórmula 1 - Proyecto Universidad Don Bosco</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>
-
