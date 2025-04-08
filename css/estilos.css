@@ -47,3 +47,37 @@
 .card-title {
       font-weight: 600;
     }
+
+ /* creadores */
+
+.imagen_creador{
+	height: 200px;
+	width: 200px;
+	border-radius: 100%;
+      object-fit: cover;
+      position: relative;
+      top: -170px;
+      margin-left: 25px;
+}
+
+.creador{
+  width: 70%;
+  height: 275px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.creador:hover{
+	transform: scale(1.07);
+}
+
+.info{
+  align-items: center;
+  margin-left: 280px;
+}
