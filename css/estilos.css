@@ -82,12 +82,12 @@
   margin-left: 280px;
 }
 /* Imágenes de la sección de reglamentos */
-.img-reglamento {
-  width: 100% !important;        
-  max-width: 600px !important;   
-  height: 350px !important;      
-  object-fit: cover !important;  
+.img-reglamentos {
+  width: 100% !important;
+  max-width: 600px !important;
+  height: 350px !important;
+  object-fit: cover !important;
   border-radius: 10px !important;
-  margin: 0 auto !important;    
-  display: block !important;     
+  margin: 0 auto !important;
+  display: block !important;
 }
