@@ -1,28 +1,49 @@
 /* boton de contacto */
 
-.boton_contacto{
-	width: 100px;
-	height: 100px;
-	bottom: 20px;
-	position: fixed;
-	border-radius: 100px;
-	right: 100px;
-	z-index: 100;
-	background: red;
-}
-
-.boton_contacto img{
-	width: 70%;
-	height: 70%;
-	border-radius: 50%;
-	z-index: 0;
-	margin: 15%;
-}
-
-.boton_contacto:hover{
-	background: green;
-	transform: scale(1.03);
-}
+.boton_contacto {
+    width: 100px;
+    height: 100px;
+    bottom: 20px;
+    position: fixed;
+    border-radius: 100px;
+    right: 100px;
+    z-index: 100;
+    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, transform 0.3s;
+    cursor: pointer;
+  }
+  .boton_contacto img {
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    user-select: none;
+  }
+  .boton_contacto:hover {
+    background: green;
+    transform: scale(1.03);
+  }
+   @media (max-width: 768px) {
+    .boton_contacto {
+      width: 80px;
+      height: 80px;
+      right: 40px;
+    }
+  }
+  @media (max-width: 480px) {
+    .boton_contacto {
+      width: 60px;
+      height: 60px;
+      right: 20px;
+      bottom: 15px;
+    }
+    .boton_contacto img {
+      width: 70%;
+      height: 70%;
+    }
+  }
 
 /* pilotos */
 
@@ -50,38 +71,41 @@
 
  /* creadores */
 
-.imagen_creador{
-	height: 200px;
-	width: 200px;
-	border-radius: 100%;
-      object-fit: cover;
-      position: relative;
-      top: -170px;
-      margin-left: 25px;
+.creador {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1000px;
+    gap: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
 }
 
-.creador{
-  width: 70%;
-  height: 275px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 30px;
-  background-color: white;
-  border-radius: 0.25rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-top: 24px;
-  margin-bottom: 24px;
+.creador .info {
+    flex: 1;
+    min-width: 250px;
 }
 
-.creador:hover{
-	transform: scale(1.07);
+.creador .imagen_creador {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100px;
 }
 
-.info{
-  align-items: center;
-  margin-left: 280px;
+.nom_cont {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
+
 /* Imágenes de la sección de reglamentos */
+
 .img-reglamentos {
   width: 100% !important;
   max-width: 600px !important;
@@ -90,4 +114,18 @@
   border-radius: 10px !important;
   margin: 0 auto !important;
   display: block !important;
+}
+
+.banner{
+      width: 90%;
+      height: auto;
+      border-radius: 20px;
+
+}
+
+.equiposimg{
+      width: 350px;
+      height: 200px;
+      margin: 50px;
+      border-radius: 15px;
 }
