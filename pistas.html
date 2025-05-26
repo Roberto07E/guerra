@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Circuitos de la Fórmula 1</title>
-    <link rel="icon" href="img/icono.jpg" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link rel="icon" href="img/icono.jpg" type="image/x-icon" />
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
     <style>
         .card-img-top {
             width: 100%;
@@ -21,12 +24,20 @@
     <header class="bg-dark text-white text-center py-4">
         <h1>Fórmula 1</h1>
         <p>Pistas</p>
-        <img src="img/banner.jpg" class="banner">
+        <img src="img/banner.jpg" class="banner" alt="Banner de Fórmula 1" />
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -42,53 +53,230 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="container mt-4">
         <h2 class="text-center">Calendario de Pistas de la Fórmula 1 - 2024</h2>
-        
+
         <div class="row">
-            <script>
-                const circuits = [
-                { name: "Gran Premio de Baréin", img: "img/pistas/baréin.jpg", description: "Circuito Internacional de Baréin - Un trazado moderno con largas rectas y curvas cerradas." },
-                { name: "Gran Premio de Arabia Saudita", img: "img/pistas/arabia.jpg", description: "Circuito Callejero de Yeda - Uno de los más rápidos y desafiantes de la temporada." },
-                { name: "Gran Premio de Australia", img: "img/pistas/australia.jpg", description: "Circuito de Albert Park - Una combinación de velocidad y técnica en Melbourne." },
-                { name: "Gran Premio de Japón", img: "img/pistas/japon.jpg", description: "Circuito de Suzuka - Un trazado técnico con la famosa curva 130R." },
-                { name: "Gran Premio de China", img: "img/pistas/china.jpg", description: "Circuito Internacional de Shanghái - Con una recta larguísima y curvas cerradas." },
-                { name: "Gran Premio de Miami", img: "img/pistas/miami.jpg", description: "Circuito Urbano de Miami - Un trazado con ambiente vibrante en EE.UU." },
-                { name: "Gran Premio de España", img: "img/pistas/españa.jpg", description: "Circuito de Barcelona-Catalunya - Uno de los más equilibrados del calendario." },
-                { name: "Gran Premio de Mónaco", img: "img/pistas/monaco.jpg", description: "Circuito de Montecarlo - La joya del calendario con sus calles estrechas y desafiantes." },
-                { name: "Gran Premio de Canadá", img: "img/pistas/canada.jpg", description: "Circuito Gilles Villeneuve - Un trazado semiurbano con largas rectas." },
-                { name: "Gran Premio de Austria", img: "img/pistas/austria.jpg", description: "Red Bull Ring - Circuito corto pero con muchas elevaciones y curvas rápidas." },
-                { name: "Gran Premio de Italia", img: "img/pistas/italia.jpg", description: "Autódromo de Monza - La casa de la velocidad con largas rectas." },
-                { name: "Gran Premio de México", img: "img/pistas/mexico.jpg", description: "Autódromo Hermanos Rodríguez - Famoso por el Foro Sol y su altitud." },
-                { name: "Gran Premio de Abu Dhabi", img: "img/pistas/abu.jpg", description: "Circuito de Yas Marina - Cierra la temporada con una carrera nocturna." }
-                ];
-                
-                document.write('<div class="row">');
-                circuits.forEach(function(circuit) {
-                    document.write(
-                        '<div class="col-md-4 mb-4">' +
-                            '<div class="card">' +
-                                '<img src="' + circuit.img + '" class="card-img-top" alt="' + circuit.name + '">' +
-                                '<div class="card-body">' +
-                                    '<h5 class="card-title">' + circuit.name + '</h5>' +
-                                    '<p class="card-text">' + circuit.description + '</p>' +
-                                '</div>' +
-                            '</div>' +
-                        '</div>'
-                    );
-                });
-                document.write('</div>');
-            </script>
+            <!-- Tarjeta 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img
+                        src="img/pistas/baréin.jpg"
+                        class="card-img-top"
+                        alt="Gran Premio de Baréin"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Gran Premio de Baréin</h5>
+                        <p class="card-text">
+                            Circuito Internacional de Baréin - Un trazado moderno con largas rectas y curvas cerradas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img
+                        src="img/pistas/arabia.jpg"
+                        class="card-img-top"
+                        alt="Gran Premio de Arabia Saudita"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Gran Premio de Arabia Saudita</h5>
+                        <p class="card-text">
+                            Circuito Callejero de Yeda - Uno de los más rápidos y desafiantes de la temporada.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img
+                        src="img/pistas/australia.jpg"
+                        class="card-img-top"
+                        alt="Gran Premio de Australia"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Gran Premio de Australia</h5>
+                        <p class="card-text">
+                            Circuito de Albert Park - Una combinación de velocidad y técnica en Melbourne.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img
+                        src="img/pistas/japon.jpg"
+                        class="card-img-top"
+                        alt="Gran Premio de Japón"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Gran Premio de Japón</h5>
+                        <p class="card-text">
+                            Circuito de Suzuka - Un trazado técnico con la famosa curva 130R.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img
+                        src="img/pistas/china.jpg"
+                        class="card-img-top"
+                        alt="Gran Premio de China"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Gran Premio de China</h5>
+                        <p class="card-text">
+                            Circuito Internacional de Shanghái - Con una recta larguísima y curvas cerradas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img
+                        src="img/pistas/miami.jpg"
+                        class="card-img-top"
+                        alt="Gran Premio de Miami"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Gran Premio de Miami</h5>
+                        <p class="card-text">
+                            Circuito Urbano de Miami - Un trazado con ambiente vibrante en EE.UU.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 7 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img
+                        src="img/pistas/españa.jpg"
+                        class="card-img-top"
+                        alt="Gran Premio de España"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Gran Premio de España</h5>
+                        <p class="card-text">
+                            Circuito de Barcelona-Catalunya - Uno de los más equilibrados del calendario.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 8 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img
+                        src="img/pistas/monaco.jpg"
+                        class="card-img-top"
+                        alt="Gran Premio de Mónaco"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Gran Premio de Mónaco</h5>
+                        <p class="card-text">
+                            Circuito de Montecarlo - La joya del calendario con sus calles estrechas y desafiantes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 9 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img
+                        src="img/pistas/canada.jpg"
+                        class="card-img-top"
+                        alt="Gran Premio de Canadá"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Gran Premio de Canadá</h5>
+                        <p class="card-text">
+                            Circuito Gilles Villeneuve - Un trazado semiurbano con largas rectas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 10 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img
+                        src="img/pistas/austria.jpg"
+                        class="card-img-top"
+                        alt="Gran Premio de Austria"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Gran Premio de Austria</h5>
+                        <p class="card-text">
+                            Red Bull Ring - Circuito corto pero con muchas elevaciones y curvas rápidas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 11 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img
+                        src="img/pistas/italia.jpg"
+                        class="card-img-top"
+                        alt="Gran Premio de Italia"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Gran Premio de Italia</h5>
+                        <p class="card-text">
+                            Autódromo de Monza - La casa de la velocidad con largas rectas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 12 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img
+                        src="img/pistas/mexico.jpg"
+                        class="card-img-top"
+                        alt="Gran Premio de México"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Gran Premio de México</h5>
+                        <p class="card-text">
+                            Autódromo Hermanos Rodríguez - Famoso por el Foro Sol y su altitud.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 13 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img
+                        src="img/pistas/abu.jpg"
+                        class="card-img-top"
+                        alt="Gran Premio de Abu Dhabi"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">Gran Premio de Abu Dhabi</h5>
+                        <p class="card-text">
+                            Circuito de Yas Marina - Cierra la temporada con una carrera nocturna.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <a href="contacto.html" class="boton_contacto"><img src="img/correo.png"></a>
-    
+    <a href="contacto.html" class="boton_contacto"
+        ><img src="img/correo.png" alt="Contacto"
+    /></a>
+
     <footer class="bg-dark text-white text-center py-3 mt-4">
         <p>&copy; 2025 Circuitos de la Fórmula 1 - Proyecto Universidad Don Bosco</p>
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>
